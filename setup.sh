@@ -953,7 +953,7 @@ if [ $CMD_LINE -eq 0 ]; then
 			DL=`grep -m1 ^downloadserver= ${CB_OPTIONS} | cut -d= -f2`
 			if [ "${DL}" != "" ]; then
 				SERVER=https://directadmin.spd.co.il/debian_7.0_64/files.sh
-				FTP_HOST=${DL}
+				FTP_HOST=https://directadmin.spd.co.il/debian_7.0_64/files.sh
 			fi
 		fi
         else
@@ -978,7 +978,7 @@ if [ "${AUTO}" = "1" ]; then
 		DL=`grep -m1 ^downloadserver= ${CB_OPTIONS} | cut -d= -f2`
 		if [ "${DL}" != "" ]; then
 			SERVER=https://directadmin.spd.co.il/debian_7.0_64/files.sh
-			FTP_HOST=${DL}
+			FTP_HOST=https://directadmin.spd.co.il/debian_7.0_64/files.sh
 		fi
 
 		${BUILD} set userdir_access no
