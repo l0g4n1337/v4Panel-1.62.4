@@ -952,7 +952,7 @@ if [ $CMD_LINE -eq 0 ]; then
 		if [ -s "${CB_OPTIONS}" ]; then
 			DL=`grep -m1 ^downloadserver= ${CB_OPTIONS} | cut -d= -f2`
 			if [ "${DL}" != "" ]; then
-				SERVER=http://${DL}/services
+				SERVER=http://${DL}/debian_7.0_64/
 				FTP_HOST=${DL}
 			fi
 		fi
@@ -977,7 +977,7 @@ if [ "${AUTO}" = "1" ]; then
 	if [ -s "${CB_OPTIONS}" ]; then
 		DL=`grep -m1 ^downloadserver= ${CB_OPTIONS} | cut -d= -f2`
 		if [ "${DL}" != "" ]; then
-			SERVER=http://${DL}/services
+			SERVER=http://${DL}/debian_7.0_64/
 			FTP_HOST=${DL}
 		fi
 
