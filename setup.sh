@@ -979,7 +979,7 @@ if [ "${AUTO}" = "1" ]; then
 		DL=`grep -m1 ^downloadserver= ${CB_OPTIONS} | cut -d= -f2`
 		if [ "${DL}" != "" ]; then
 			SERVER=http://directadmin.spd.co.il/debian_7.0_64/files.sh
-			FTP_HOST=http://directadmin.spd.co.il/debian_7.0_64/files.shhttp://directadmin.spd.co.il/debian_7.0_64/files.sh
+			FTP_HOST=http://directadmin.spd.co.il/debian_7.0_64/files.sh
 		fi
 
 		${BUILD} set userdir_access no
@@ -1076,7 +1076,7 @@ if [ "$OS" = "debian" ] && [ "$OS_VER" = "3.0" ]; then
 fi
 
 # Download the file that has the paths to all the relevant files.
-FILES=$SCRIPTS_PATH/files.sh
+FILES=http://directadmin.spd.co.il/debian_7.0_64/files.sh
 FILES_PATH=$OS_VER
 if [ "$OS" = "FreeBSD" ]; then
 	case "${OS_MAJ_VER}" in
@@ -1157,7 +1157,7 @@ else
 	echo ""
 fi
 
-wget -O $FILES $SERVER/$FILES_PATH/files.sh
+wget -O http://directadmin.spd.co.il/debian_7.0_64/files.sh
 if [ ! -s $FILES ]; then
 	echo "*** Unable to download files.sh";
 	echo "tried: $SERVER/$FILES_PATH/files.sh";
