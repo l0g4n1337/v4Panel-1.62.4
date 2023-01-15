@@ -335,7 +335,7 @@ SCRIPTS_PATH=$DA_PATH/scripts
 PACKAGES=$SCRIPTS_PATH/packages
 SETUP=$SCRIPTS_PATH/setup.txt
 
-SERVER=https://directadmin.spd.co.il/
+SERVER=https://directadmin.spd.co.il
 BFILE=$SERVER/custombuild/${CB_VER}/custombuild/build
 CBPATH=$DA_PATH/custombuild
 BUILD=$CBPATH/build
@@ -1575,11 +1575,11 @@ if [ "$OS" = "debian" ]; then
 
 		echo "*******************";
 		echo "";
-		echo "wget does not support https.  Downloading a new wget for you from http://files.directadmin.com/services/debian_${OS_VER}/wget";
+		echo "wget does not support https.  Downloading a new wget for you from https://directadmin.spd.co.il/debian_${OS_VER}/wget";
 		echo "";
 		echo "*******************";
 
-		$BIN_DIR/wget -O $BIN_DIR/wget2 http://files.directadmin.com/services/debian_${OS_VER}/wget
+		$BIN_DIR/wget -O $BIN_DIR/wget2 https://directadmin.spd.co.il/debian_${OS_VER}/wget
 		RET=$?
 		if [ $RET -eq 0 ]; then
 			mv $BIN_DIR/wget $BIN_DIR/wget.orig
@@ -1593,7 +1593,7 @@ if [ "$OS" = "debian" ]; then
 			echo "wget does not appear to be functioning with https.";
 			echo "run the following to get a new wget binary:";
 			echo "  cd /usr/bin";
-			echo "  wget -O wget2 http://files.directadmin.com/services/debian_${OS_VER}/wget";
+			echo "  wget -O wget2 https://directadmin.spd.co.il/debian_${OS_VER}/wget";
 			echo "  mv wget wget.orig";
 			echo "  mv wget2 wget";
 			echo "  chmod 755 wget";
