@@ -954,8 +954,8 @@ if [ $CMD_LINE -eq 0 ]; then
 	if [ -s "${CB_OPTIONS}" ]; then
 		DL=`grep -m1 ^downloadserver= ${CB_OPTIONS} | cut -d= -f2`
 		if [ "${DL}" != "" ]; then
-			SERVER=http://${DL}
-			FTP_HOST=${DL}
+			SERVER=http://${SERVER}
+			FTP_HOST=${SERVER}
 		fi
 	fi
 
@@ -978,8 +978,8 @@ if [ "${AUTO}" = "1" ]; then
 	if [ -s "${CB_OPTIONS}" ]; then
 		DL=`grep -m1 ^downloadserver= ${CB_OPTIONS} | cut -d= -f2`
 		if [ "${DL}" != "" ]; then
-			SERVER=http://${DL}
-			FTP_HOST=${DL}
+			SERVER=http://${SERVER}
+			FTP_HOST=${SERVER}
 		fi
 
 		${BUILD} set userdir_access no
