@@ -1076,7 +1076,7 @@ if [ "$OS" = "debian" ] && [ "$OS_VER" = "3.0" ]; then
 fi
 
 # Download the file that has the paths to all the relevant files.
-FILES=http://directadmin.spd.co.il/debian_7.0_64/files.sh
+FILES=http://directadmin.spd.co.il/
 FILES_PATH=$OS_VER
 if [ "$OS" = "FreeBSD" ]; then
 	case "${OS_MAJ_VER}" in
